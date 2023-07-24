@@ -1,0 +1,86 @@
+//variables
+
+$primaryBlue: #234e70;
+$primaryYellow: #fbf8be;
+
+.body {
+  height: 100vh;
+  width: 100%;
+  background: #234e70;
+  color: #fff;
+  margin: 0;
+}
+
+.inlineLink {
+  color: #fbf8be;
+  text-decoration: underline;
+}
+
+// keyframes
+@keyframes fadeUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUpLogo {
+  from {
+    transform: scale(2) translateY(10px);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(2) translateY(0px);
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeUpLogo {
+  from {
+    transform: scale(2) translateY(10px);
+    opacity: 0;
+  }
+
+  to {
+    transform: scale(2) translateY(0px);
+    opacity: 1;
+  }
+}
+
+@keyframes shrink {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0%;
+  }
+}
+
+@-webkit-keyframes shrink {
+  from {
+    width: 100%;
+  }
+
+  to {
+    width: 0%;
+  }
+}

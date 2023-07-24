@@ -1,0 +1,128 @@
+.mainNav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 11;
+  width: 100%;
+  height: 100px;
+  background-color: $primaryBlue;
+  color: #fff;
+}
+
+.logoMain {
+  transform: scale(2);
+  height: 50px;
+  width: 50px;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 1s;
+  -webkit-animation-delay: 1s;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-name: fadeUpLogo;
+  -webkit-animation-name: fadeULogo;
+}
+
+.logoOne {
+  fill: $primaryYellow;
+  stroke: $primaryYellow;
+  stroke-miterlimit: 10;
+  stroke-width: 3px;
+  transition: all 0.25s;
+}
+
+.logoTwo {
+  fill: $primaryBlue;;
+  transition: all 0.25s linear;
+}
+
+.logoThree {
+  fill: none;
+  stroke: $primaryBlue;;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2px;
+  transition: all 0.25s linear;
+}
+
+.logoMain:hover .logoOne,
+.logoMain:focus .logoOne {
+  fill: $primaryBlue;;
+  stroke: $primaryYellow;
+  transition: all 0.25s;
+}
+
+.logoMain:hover .logoTwo,
+.logoMain:focus .logoTwo {
+  fill: $primaryYellow;
+  transition: all 0.25s;
+}
+
+.logoMain:hover .logoThree,
+.logoMain:focus .logoThree {
+  stroke: $primaryYellow;
+  transition: all 0.25s;
+}
+
+.navLinks {
+  display: flex;
+}
+
+.navLinkWrapper {
+  border: 2px solid $primaryYellow;
+  margin: 0px 16px;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+  transition: all 350ms linear;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-delay: 1.5s;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  -webkit-animation-delay: 1.5s;
+  animation-name: fadeUp;
+  -webkit-animation-name: fadeUp;
+}
+
+.navLinkWrapper::before {
+  content: "";
+  position: absolute;
+  width: 104px;
+  height: 15px;
+  background-color: $primaryBlue;;
+  top: -2px;
+  left: -2px;
+  transition: width 0.5s, height 0.5s 0.5s;
+}
+
+.navLinkWrapper::after {
+  content: "";
+  position: absolute;
+  width: 104px;
+  height: 15px;
+  background-color: $primaryBlue;;
+  bottom: -2px;
+  right: -2px;
+  transition: width 0.5s, height 0.5s 0.5s;
+}
+
+.navLinkWrapper:hover::before,
+.navLinkWrapper:focus::before,
+.navLinkWrapper:hover::after,
+.navLinkWrapper:focus::after {
+  width: 0;
+  height: 2px;
+  transition: height 0.5s, width 0.5s 0.5s;
+}
+
+.navLink {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  line-height: 21px;
+}
