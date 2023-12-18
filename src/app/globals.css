@@ -6,6 +6,11 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
+  --primary: '#004e64';
+  --secondary: '#00a5cf';
+  --tertiary: '#25a18e';
+  --accent: '#7ae582';
+  --aqua: '#9fffcb';
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,8 +21,99 @@
   }
 }
 
+
+@keyframes rotateIn {
+  from {
+    transform: rotate(45deg) translateX(100%) translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: rotate(0deg) translateX(0) translateY(0);
+    opacity: 1;
+  }
+}
+
+.rotate-in {
+  animation: rotateIn 0.5s ease-out;
+  animation-duration: 1000ms;
+}
+
+.neon-glow {
+  box-shadow: 0 0 10px rgba(0, 78, 100, 0.8), 0 0 20px rgba(0, 165, 207, 0.8), 0 0 30px rgba(159, 255, 203, 0.8); /* Adjust color and intensity as needed */
+  text-shadow: 0 0 10px rgba(0, 78, 100, 0.8), 0 0 20px rgba(0, 165, 207, 0.8), 0 0 30px rgba(159, 255, 203, 0.8); /* Adjust color and intensity as needed */
+  transition: box-shadow 0.3s ease-in-out, text-shadow 0.3s ease-in-out;
+}
+
+.neon-glow:hover {
+  box-shadow: 0 0 20px rgba(52, 152, 219, 0.8), 0 0 40px rgba(52, 152, 219, 0.8), 0 0 60px rgba(159, 255, 203, 0.8); /* Adjust color and intensity as needed */
+  text-shadow: 0 0 20px rgba(52, 152, 219, 0.8), 0 0 40px rgba(52, 152, 219, 0.8), 0 0 60px rgba(159, 255, 203, 0.8); /* Adjust color and intensity as needed */
+}
+
+.nav-link-0 {
+  position: absolute;
+  left: -65px;
+  bottom: 60px;
+  transform: rotate(14deg);
+  opacity: 1;
+  transition: all 350ms;
+}
+
+.nav-link-1 {
+  opacity: 1;
+  position: absolute;
+  bottom: 153px;
+  left: -42px;
+  transform: rotate(29deg);
+  transition: all 350ms;
+}
+
+.nav-link-2 {
+  opacity: 1;
+  position: absolute;
+  bottom: 240px;
+  left: 0px;
+  transform: rotate(46deg);
+  transition: all 350ms;
+}
+
+
+.nav-link-3 {
+  opacity: 1;
+  position: absolute;
+  bottom: 300px;
+  left: 75px;
+  transform: rotate(52deg);
+  transition: all 350ms;
+}
+
+.nav-link-start {
+  left: 250px;
+  bottom: 0;
+  opacity: 0;
+}
+
+
+.nav-link-0:hover {
+  transform: rotate(14deg) scale(1.2);
+}
+
+
+.nav-link-1:hover {
+  transform: rotate(29deg) scale(1.2);
+}
+
+
+.nav-link-2:hover {
+  transform: rotate(46deg) scale(1.2);
+}
+
+
+.nav-link-3:hover {
+  transform: rotate(52deg) scale(1.2);
+}
+
 body {
-  color: rgb(var(--foreground-rgb));
+  color: #fff;
   background: linear-gradient(
       to bottom,
       transparent,
